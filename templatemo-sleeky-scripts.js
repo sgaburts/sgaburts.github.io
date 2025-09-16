@@ -20,34 +20,34 @@ class VerticalCubeSlider {
         
         this.images = [
             {
-                url: 'images/unsplash-image-01.jpg',
+                url: 'images/video1.mp4',
                 thumb: 'images/unsplash-thumb-01.jpg',
-                title: 'Mountain Peak',
-                description: 'Majestic snow-capped mountains reaching towards the endless sky, showcasing nature\'s raw beauty and power.'
+                title: 'Active Flow Control',
+                description: 'Adaptive feedback control for turbulent flows over wings with real time system identification.'
             },
             {
-                url: 'images/unsplash-image-02.jpg',
+                url: 'images/image1.png',
                 thumb: 'images/unsplash-thumb-02.jpg',
-                title: 'Sky Paradise',
-                description: 'Vibrant sunset clouds painting the heavens in brilliant oranges and purples, creating a dreamlike atmosphere.'
+                title: 'High Speed Flows',
+                description: 'Direct numerical simulation of laminar-turbulent transition in high-speed flows.'
             },
             {
                 url: 'images/unsplash-image-03.jpg',
                 thumb: 'images/unsplash-thumb-03.jpg',
-                title: 'Misty Forest',
-                description: 'Ethereal morning fog weaving through ancient trees, creating a mystical and serene woodland sanctuary.'
+                title: 'Wake Dynamics',
+                description: 'Wake dynamics of finite aspect ratio wings at low Reynolds numbers.'
             },
             {
                 url: 'images/unsplash-image-04.jpg',
                 thumb: 'images/unsplash-thumb-04.jpg',
-                title: 'Ocean Waves',
-                description: 'Powerful ocean waves crashing against rugged coastlines, demonstrating the endless rhythm of the sea.'
+                title: 'Particles and Turbulence',
+                description: 'Inertial FTLE of bubbles in turbulent channel flow.'
             },
             {
                 url: 'images/unsplash-image-05.jpg',
                 thumb: 'images/unsplash-thumb-05.jpg',
-                title: 'Night Sky',
-                description: 'Brilliant stars scattered across the cosmic canvas, revealing the infinite mystery of our universe.'
+                title: 'Drag at Low Earth Orbit',
+                description: 'Roughness resolving DSMC of spacecraft materials at LEO conditions.'
             }
         ];
         
