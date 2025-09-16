@@ -11,14 +11,7 @@ body {
     overflow: hidden;
     position: relative;
   }
-  
-  .slider {
-    display: flex;
-    width: 400%;
-    height: 100%;
-    animation: slide 20s infinite;
-  }
-  
+    
   .slide {
     flex: 1 0 100%;
     display: flex;
@@ -43,23 +36,19 @@ body {
     object-position: center;
   }
   
-  /* @keyframes slide {
-    0%   { transform: translateX(0%); }
-    20%  { transform: translateX(0%); }
-    25%  { transform: translateX(-100%); }
-    45%  { transform: translateX(-100%); }
-    50%  { transform: translateX(-200%); }
-    70%  { transform: translateX(-200%); }
-    75%  { transform: translateX(-300%); }
-    95%  { transform: translateX(-300%); }
-    100% { transform: translateX(0%); }
-  } */
-
   @keyframes slide {
-    0%, 22%   { transform: translateX(0%); }
-    28%, 50%  { transform: translateX(-100%); }
-    56%, 78%  { transform: translateX(-200%); }
-    84%, 100% { transform: translateX(-300%); }
+    0%, 20%    { transform: translateX(0%); }      /* slide 1 hold */
+    25%, 45%   { transform: translateX(-100%); }   /* slide 2 hold */
+    50%, 70%   { transform: translateX(-200%); }   /* slide 3 hold */
+    75%, 95%   { transform: translateX(-300%); }   /* slide 4 hold */
+    100%       { transform: translateX(0%); }      /* back to start */
+  }
+  
+  .slider {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    animation: slide 48s infinite;
   }
   
   section {
