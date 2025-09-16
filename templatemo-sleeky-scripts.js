@@ -369,16 +369,16 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', updateActiveNavigation);
 
     // Services tab functionality
-    const serviceTabs = document.querySelectorAll('.service-tab');
-    const serviceContents = document.querySelectorAll('.service-content');
+    const researchTabs = document.querySelectorAll('.research-tab');
+    const researchContents = document.querySelectorAll('.research-content');
 
-    serviceTabs.forEach(tab => {
+    researchTabs.forEach(tab => {
         tab.addEventListener('click', () => {
-            const targetService = tab.getAttribute('data-service');
+            const targetService = tab.getAttribute('data-research');
             
             // Remove active class from all tabs and contents
-            serviceTabs.forEach(t => t.classList.remove('active'));
-            serviceContents.forEach(c => c.classList.remove('active'));
+            researchTabs.forEach(t => t.classList.remove('active'));
+            researchContents.forEach(c => c.classList.remove('active'));
             
             // Add active class to clicked tab
             tab.classList.add('active');
