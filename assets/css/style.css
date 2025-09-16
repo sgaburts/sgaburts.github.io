@@ -54,9 +54,16 @@ header.banner {
   color: black;
   background: rgba(255, 255, 255, 0.7);  /* semi-transparent white */
   border-radius: 8px;              /* optional rounded corners */
-  display: inline-block;           /* box wraps tightly around text */
+  display: inline-block;  /* wrap tight to text */
+  text-decoration: none;  /* remove underline */
   box-sizing: border-box;
-  max-width: 90%;                  /* optional: prevent overflow on small screens */
+  max-width: 90%;
+  transition: background 0.3s ease;
+}
+
+
+.slide .caption:hover {
+  background: rgba(255, 255, 255, 0.9); /* brighten on hover */
 }
 
 /* Heading inside caption */
@@ -155,8 +162,10 @@ figure {
 }
 
 figure img {
-  width: 100%;
+  width: 50vw;
   height: auto;
+  object-fit: contain;   /* ensures full image is visible */
+  display: block;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
@@ -166,4 +175,40 @@ figcaption {
   font-size: 0.9rem;
   color: #555;
 }
+
+
+/* Project navigation at bottom */
+.project-nav {
+  padding: 2rem;
+  text-align: center;
+  background: #fafafa;
+  margin-top: 3rem;
+}
+
+.project-nav h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.project-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-nav li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.project-nav a {
+  text-decoration: none;
+  color: #0077b5; /* LinkedIn blue (or your theme color) */
+  font-weight: bold;
+}
+
+.project-nav a:hover {
+  text-decoration: underline;
+}
+
 
