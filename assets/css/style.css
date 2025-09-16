@@ -43,7 +43,7 @@ body {
     object-position: center;
   }
   
-  @keyframes slide {
+  /* @keyframes slide {
     0%   { transform: translateX(0%); }
     20%  { transform: translateX(0%); }
     25%  { transform: translateX(-100%); }
@@ -53,6 +53,13 @@ body {
     75%  { transform: translateX(-300%); }
     95%  { transform: translateX(-300%); }
     100% { transform: translateX(0%); }
+  } */
+
+  @keyframes slide {
+    0%, 22%   { transform: translateX(0%); }
+    28%, 50%  { transform: translateX(-100%); }
+    56%, 78%  { transform: translateX(-200%); }
+    84%, 100% { transform: translateX(-300%); }
   }
   
   section {
