@@ -1,0 +1,72 @@
+/* General page styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Slider container */
+header.banner {
+  width: 100vw;
+  height: 60vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Slider wrapper */
+.slider {
+  display: flex;
+  width: 400vw;         /* 4 slides */
+  height: 100%;
+  animation: slide 48s infinite;
+}
+
+/* Each slide */
+.slide {
+  flex: 0 0 100vw;      /* slide = 100% viewport width */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Images and videos inside slides */
+.slide img,
+.slide video {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;   /* ensures full image is visible */
+  display: block;
+}
+
+/* Slider animation */
+@keyframes slide {
+  0%, 19%   { transform: translateX(0); }      
+  20%, 24%  { transform: translateX(-100vw); }   
+  25%, 44%  { transform: translateX(-100vw); }   
+  45%, 49%  { transform: translateX(-200vw); }   
+  50%, 69%  { transform: translateX(-200vw); }   
+  70%, 74%  { transform: translateX(-300vw); }   
+  75%, 94%  { transform: translateX(-300vw); }   
+  95%, 100% { transform: translateX(0); }      
+}
+
+/* Page content sections */
+section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f5f5f5;
+  margin-top: 2rem;
+}
