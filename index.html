@@ -213,6 +213,42 @@
 
   <script src="assets/js/slider.js"></script>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const slider = document.querySelector(".slider");
+      const slides = slider.querySelectorAll(".slide");
+      const count = slides.length;
+  
+      const hold = 20;       // % of cycle each slide is held
+      const transition = 5;  // % of cycle spent transitioning
+      const total = hold + transition;
+      const duration = count * total; // total cycle in %
+  
+      // Build keyframes dynamically
+      let keyframes = "@keyframes slide {";
+      slides.forEach((_, i) => {
+        const start = (i * total) / (count * total) * 100;
+        const mid = (i * total + hold) / (count * total) * 100;
+        const end = ((i + 1) * total) / (count * total) * 100;
+        const offset = -i * 100;
+        const nextOffset = -(i + 1) * 100;
+  
+        keyframes += `${start}% { transform: translateX(${offset}vw); }`;
+        keyframes += `${mid}% { transform: translateX(${offset}vw); }`;
+        keyframes += `${end}% { transform: translateX(${nextOffset}vw); }`;
+      });
+      keyframes += `100% { transform: translateX(0); } }`;
+  
+      // Inject style into page
+      const style = document.createElement("style");
+      style.innerHTML = keyframes;
+      document.head.appendChild(style);
+  
+      // Apply animation with correct duration
+      slider.style.animation = `slide ${count * 6}s infinite`;
+    });
+  </script>
+  
   
 </body>
 </html>
