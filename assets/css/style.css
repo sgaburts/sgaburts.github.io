@@ -161,7 +161,8 @@ figure {
   max-width: 800px;
 }
 
-figure img {
+figure img,
+figure video {
   width: 50vw;
   height: auto;
   object-fit: contain;   /* ensures full image is visible */
@@ -212,15 +213,44 @@ figcaption {
 }
 
 
-/* Bibliography */
-#bibliography {
-  max-width: 900px;
-  margin: 2rem auto;
-  font-size: 1rem;
-  line-height: 1.6;
+.about {
+  padding: 50px 10%;
+  background: #f9f9f9;
 }
 
-#bibliography h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-left {
+  text-align: center;
+  flex: 1;
+}
+
+.profile-pic {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  /* border: 3px solid #ccc; */
+  margin-bottom: 15px;
+}
+
+.about-social a {
+  margin: 0 8px;
+  display: inline-block;
+  color: #444;
+  transition: color 0.3s;
+}
+
+.about-social a:hover {
+  color: #0077b5; /* highlight on hover */
+}
+
+.about-right {
+  flex: 2;
+  min-width: 250px;
 }
