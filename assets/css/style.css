@@ -45,43 +45,47 @@ header.banner {
 }
 
 /* Caption overlay aligned with page content */
+/* Default (desktop) */
 .slide .caption {
   position: absolute;
-  bottom: 20px;                    /* distance from bottom of slider */
-  left: calc((100vw - 900px)/2);   /* match page content left edge (centered 900px max) */
-  padding: 1rem;                   /* spacing inside box */
-  text-align: left;                
+  bottom: 20px;
+  left: calc((100vw - 900px)/2);
+  /* padding: 1rem; */
+  padding: 0.5rem 0.8rem;  /* tighter padding */
+  text-align: left;
   color: black;
-  background: rgba(255, 255, 255, 0.7);  /* semi-transparent white */
-  border-radius: 8px;              /* optional rounded corners */
-  display: inline-block;  /* wrap tight to text */
-  text-decoration: none;  /* remove underline */
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  display: inline-block;
   box-sizing: border-box;
   max-width: 90%;
   transition: background 0.3s ease;
+}
+
+/* On narrow screens */
+@media (max-width: 900px) {
+  .slide .caption {
+    left: 5%;             /* small margin from screen edge */
+    right: 5%;            /* keep text inside screen */
+    max-width: 90%;       /* prevent overflow */
+    font-size: 0.9rem;    /* slightly smaller text if needed */
+  }
+
+  .slide .caption h2 {
+    font-size: 1.2rem;
+    margin: 0 0 0.25rem;   /* remove large default top margin */
+  }
+
+  .slide .caption p {
+    font-size: 0.9rem;
+    margin: 0; 
+  }
 }
 
 
 .slide .caption:hover {
   background: rgba(255, 255, 255, 0.9); /* brighten on hover */
 }
-
-/* Heading inside caption */
-.slide .caption h2 {
-  margin: 0;
-  font-size: 1.6rem;
-  text-align: left;
-  color: black;
-}
-
-/* Subheading inside caption */
-.slide .caption p {
-  margin: 0.5rem 0 0;
-  font-size: 1.0rem;
-  text-align: left;
-  color: black;
-}
-
 
 
 /* Slider animation */
@@ -101,6 +105,7 @@ section {
   padding: 2rem;
   max-width: 900px;
   margin: auto;
+  text-align: justify;
 }
 
 footer {
@@ -165,16 +170,18 @@ figure img,
 figure video {
   width: 50vw;
   height: auto;
-  object-fit: contain;   /* ensures full image is visible */
+  object-fit: contain;  
   display: block;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
+} 
+
 
 figcaption {
   margin-top: 0.5rem;
   font-size: 0.9rem;
   color: #555;
+  text-align: center;
 }
 
 
