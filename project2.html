@@ -30,21 +30,52 @@
     </section>
 
     <section>
-      <h2>Figures</h2>
+      <h2>Single actuator case</h2>
       <figure>
-        <img src="assets/media/image1.png" alt="Description of figure 1">
-        <figcaption>Figure 1. Caption describing this image.</figcaption>
+        <video autoplay muted loop>
+          <source src="assets/media/3d_1act.mp4" type="video/mp4">
+        </video>
+        <figcaption>Figure 1. Time history of an online output control run at of a NACA0015 wing at 𝛼 = 22◦ with a single actuator. 
+          The control singla u_k, separation location x_k (left), the realtime plots of the state-space matrices and the modes of the A matrix (top right)
+           as well as the norms of the A nad B state-space matrices, norms of the feedback and feedforward gains and the CL/CD (bottom rith) are shown.
+          </figcaption>
       </figure>
-      <figure>
-        <img src="assets/media/image2.png" alt="Description of figure 2">
-        <figcaption>Figure 2. Another caption.</figcaption>
-      </figure>
+
     </section>
 
     <section>
-      <h2>Conclusions</h2>
+      <h2>Multi-actuator case</h2>
+      <figure>
+        <video autoplay muted loop>
+          <source src="assets/media/3d_3act.mp4" type="video/mp4">
+        </video>
+        <figcaption>Figure 2. Time history of an online output control run at of a NACA0015 wing at 𝛼 = 22◦ with a three actuators. 
+          The control singla u_k, separation location x_k (left), the realtime plots of the state-space matrices and the modes of the A matrix (top right)
+           as well as the norms of the A nad B state-space matrices, norms of the feedback and feedforward gains and the CL/CD (bottom rith) are shown.
+          </figcaption>
+      </figure>
       <p>
-        Wrap up the project with conclusions and possible future directions.
+        Here there are three actuators along the span and the vlaues of the separtion laoction x_k is measured at three spanwise lcoations behind each actuator.
+      </p>
+    </section>
+
+
+    <section>
+      <h2>Adpting to changing conditions</h2>
+      <figure>
+        <video autoplay muted loop>
+          <source src="assets/media/3d+4.mp4" type="video/mp4">
+        </video>
+        <figcaption>Figure 3. Flow over a NACA0015 wing at 𝛼 = 22◦ subjected to a pitch up manoeuvre. 
+          Line plot shows angle of attack and uncontrolled baseline (top) and active control (bottom) flows are shown.
+          </figcaption>
+      </figure>
+      <p>
+      The robustness of the control to changes of the flow is tested by introducing a change in the airfoil angle of attack.
+      At t=200 the free-stream velocity vector is changed by 4 degrees, which causes the effective angle of attack of the airfoil to increase to 26 degrees
+      resulting in an increase of the mean and amplitude of the C_L/C_D fluctuations for the baseline case.
+      Full attenuation of shedding was not achieved afther the pitch up, however, the amplitude of CL/CD fluctuations is reduced by about 50%.
+      
       </p>
     </section>
   </main>
