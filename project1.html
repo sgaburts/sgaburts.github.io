@@ -31,6 +31,13 @@
         For a fixed wing craft this may require operations at high angles of attack which means proximity to stall conditions. Active flow control is essential to mitigate massive flow separation and augment lift at these conditions. 
         Moreover, such environments may require rapid changes of the control policy in response to changes of the surrounding flow. Hence, the need to develop an adaptive closed-loop control approach for the unsteady separated flow. 
       </p>
+
+      <p>
+        Machine learning approaches that recently gained popularity in active flow control rely on a lot of training data collected offline. The performance of such methods in cases where the flow conditions deviate substantially from the training case may not be optimal. And because training typically takes place over long periods of time compared to the typical timescales of flow evolution in a cityscape, their ability to adapt on the fly may be limited. A key advantage of modal decomposition-based approaches I have explored is their ability to identify and update the state-space model over time, often without any prior knowledge of the system dynamics. This means that they can adapt to flow changes on the fly with reaction time comparable to flow timescales of interest. Furthermore, modal decompositions exploit the physics of coherent structures as well as energy and frequency content in the flow representing a middle ground between purely data-driven machine learning and fully physics-based model reduction.
+      </p>
+      <p>
+        I have implemented an online system identification algorithm using online dynamic mode decomposition and adaptive feedback control in Nek5000 code. It has been applied to unsteady flow problems of increasing complexity starting with 2D stalled airfoil, finite 3D wing with one or multiple actuators and turbulent flow over a 3D wing segment. I have shown this control can adapt on the fly to changes in the angle of attack and restabilize the flow for both 2D and 3D wing cases. The approach was also used to control separation separation location resulting in increased lift to drag for a turbulent flow.
+      </p>
     </section>
 
     <section>
@@ -47,16 +54,16 @@
 
       A sample time history of an online adaptive control run is shown in Fig. 1.
       The control is kept off for one chord time unit and is enabled at t=1.
-      The uncontrolled separation location oscillates around 65% chord. The 𝐿2 norm of the state matrix A_k is changing rapidly as the oDMDc is adjusting as new information becomes available, the norm of the input matrix B_k is almost constant as the actuator input is zero.
-      The changes in the norm of C_k are simply due to it being computed from the output y_k, which is fluctuating.
+      The uncontrolled separation location oscillates around 65% chord. The 𝐿2 norm of the state matrix A is changing rapidly as the oDMDc is adjusting as new information becomes available, the norm of the input matrix B is almost constant as the actuator input is zero.
+      The changes in the norm of C are simply due to it being computed from the output y, which is fluctuating.
       When the control is enabled, the actuator input is increased causing changes in B_k.
       The separation location moves downstream, and the flow is briefly attached at t≈1.8.
       This is followed by some transients when the separation moves quite wildly.
 
       The controller update was set to 0.5 chord time units in this case.
-      It can be seen that the feedback gain K_k starts to adjust at t=2.5. resulting in larger control inputs, this in turn causes larger changes in the B_k. At a t≈4, the separation location reaches the set target of 80% chord.
+      It can be seen that the feedback gain K starts to adjust at t=2.5. resulting in larger control inputs, this in turn causes larger changes in the B. At a t≈4, the separation location reaches the set target of 80% chord.
       The LQT gains and the actuator input converges to steady value needed to keep the separation at the target location.
-      The strength of turbulent structures in the boundary layer downstream of the actuator is greatly reduced and strong turbulence vortices reappear only well downstream of separation location as shown in Fig. 1 at t=8.
+      The strength of turbulent structures in the boundary layer downstream of the actuator is greatly reduced and strong turbulence vortices reappear only well downstream of separation location.
       The norms of the state-space model matrices take slightly longer to converge because the forgetting factor of the oDMDc was set close to 1, which preserves old snapshots.
       A lower value of the forgetting factor can result in faster adapting state-space model, however rapid variations may not be ideal from the controller design point of view.
       Hence for the purposes of this study we have kept forgetting factor close to 1. Similarly, smaller controller update interval can allow faster response and its effect will be considered in what follows.
@@ -67,12 +74,13 @@
       </figure> -->
     </section>
 
-    <section>
+    <!-- <section>
       <h2>Conclusions</h2>
       <p>
         Wrap up the project with conclusions and possible future directions.
       </p>
-    </section>
+    </section> -->
+
   </main>
 
   <!-- Navigation to other projects -->

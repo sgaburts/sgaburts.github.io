@@ -166,7 +166,7 @@ figure {
   max-width: 800px;
 }
 
-figure img,
+/* figure img,
 figure video {
   width: 50vw;
   height: auto;
@@ -174,7 +174,18 @@ figure video {
   display: block;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-} 
+}  */
+
+figure img,
+figure video {
+  width: var(--media-width, 50vw);
+  height: var(--media-height, auto);
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;          /* centers the media */
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
 
 figcaption {

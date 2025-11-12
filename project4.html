@@ -23,7 +23,10 @@
     <section>
       <h2>Particles and Turbulence</h2>
       <p>
-        This project explores ... (paragraphs of text here).
+        Coherent vortical structures are an important feature of wall-bounded turbulence, and understanding how light and heavy particles move with respect to these structures can be useful for many applications of measurement and flow control. The tendency of light particle and bubbles to accumulate in vortices can be used for disrupting these structures. One can envisage a potential targeted drag reduction concept, where polymer-carrying particles are engineered to get entrapped in coherent vortical structure and release dilute polymer, thereby disrupting vortices and reducing drag. 
+      </p>
+      <p>
+        I developed an MPI parallel Fortran code to compute and analyze particle motion - allowed extending the analysis to 3D turbulent flows.  The code also computes finite time Lyapunov exponent (FTLE) fields for inertial particles. Similar to how regular FTLE are used to identify Lagrangian coherent structures, this approach allows to identifying repelling and attracting coherent structures of the flow. I have also developed advanced visualization scripts using Python to track motion of particles.
       </p>
     </section>
 
@@ -33,14 +36,14 @@
         <video autoplay muted loop>
           <source src="assets/media/backward_slices_wbubbles.mp4" type="video/mp4">
         </video>
-        <figcaption>Figure 1. .</figcaption>
+        <figcaption>Figure 1. Motion of a sheet of light particles. Flow visualised using FTLE.</figcaption>
       </figure>
 
       <figure>
         <video autoplay muted loop>
           <source src="assets/media/backward_slices_wheavy.mp4" type="video/mp4">
         </video>
-        <figcaption>Figure 2. .</figcaption>
+        <figcaption>Figure 2. Motion of a sheet of heavy particles. Flow visualised using FTLE.</figcaption>
       </figure>
 
 
@@ -48,23 +51,24 @@
         <video autoplay muted loop>
           <source src="assets/media/bubble_1_long.mp4" type="video/mp4">
         </video>
-        <figcaption>Figure 3. .</figcaption>
+        <figcaption>Figure 3. Motion of a light particle. Flow visualised with Q-criterion. Black arrow is the vector of particle in-plane velocity, gray arrow is the vector of flow velocity experienced by the particle.</figcaption>
       </figure>
       <figure>
         <video autoplay muted loop>
           <source src="assets/media/heavy_1_long.mp4" type="video/mp4">
         </video>
-        <figcaption>Figure 4. .</figcaption>
+        <figcaption>Figure 4. Motion of a heavy particle. Flow visualised with Q-criterion. Black arrow is the vector of particle in-plane velocity, gray arrow is the vector of flow velocity experienced by the particle.</figcaption>
       </figure>
 
     </section>
 
-    <section>
+    <!-- <section>
       <h2>Conclusions</h2>
       <p>
         Wrap up the project with conclusions and possible future directions.
       </p>
-    </section>
+    </section> -->
+
   </main>
 
   <!-- Navigation to other projects -->

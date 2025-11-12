@@ -21,26 +21,34 @@
     <section>
       <h2>Orbital Drag</h2>
       <p>
-        This project explores ... (paragraphs of text here).
+        Most of the commercial low Earth orbit constellations that have rapidly grown in the past few years operate at 
+      around 500km altitude. The rarefied atmosphere at this altitude causes drag that eventually decays the orbit. 
+      Moreover, the dominance of extremely reactive atomic oxygen (AO) causes damage to thermal insulation and structure 
+      of the spacecraft. This makes accurate drag predictions and development of AO resistant materials critical for 
+      commercialization and utilization of space. 
+    </p>
+    <p>
+      My work on a multidisciplinary DARPA funded project focused on simulations
+       of orbital drag as well as understanding how it varies as the surface is eroded by AO. I have closely collaborated with
+        experiments in the chemical department to scan the surfaces of materials damaged by AO exposure and have established a
+         novel workflow for simulations resolving the roughness shape and computing drag using kinetic methods.
       </p>
-    </section>
 
-    <section>
-      <h2>Figures</h2>
+      <figure>
+        <img src="assets/media/dsmc_concept.png" alt="Description of figure 2">
+        <figcaption>Figure 1. Conceptual over view of roughness-resolved DSMC simulatiions.</figcaption>
+      </figure>
 
+      <p>
+        The primary question I addressed is whether knowing the exact surface roughness alone is sufficient for accurate drag prediction. To do this we wanted to decoupled effects of roughness from those of surface chemistry. So instead of modelling roughness as is typically done in the literature I used the exact surface profile and mesh that in the simulation. A surface scattering model was then fitted for a flat surface using the molecule beam scattering experiments at UC Boulder and applied to each facet of the surface mesh of the rough surface. While in reality, ablation and surface species distributions due to reactions will probably make this model inaccurate to represent the surface as a whole, we hypothesized that the drag is not very sensitive to surface chemical changes and mostly depends on the roughness. So using the same model at at each facet locally will be enough to accurately capture scattering profiles and drag.
+      </p>
 
       <figure>
         <img src="assets/media/beam.png" alt="Description of figure 2">
-        <figcaption>Figure 1. Another caption.</figcaption>
+        <figcaption>Figure 2. An example of surface beam scattering DSMC simulatiion.</figcaption>
       </figure>
     </section>
 
-    <section>
-      <h2>Conclusions</h2>
-      <p>
-        Wrap up the project with conclusions and possible future directions.
-      </p>
-    </section>
   </main>
 
   <!-- Navigation to other projects -->
