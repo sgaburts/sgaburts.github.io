@@ -43,10 +43,22 @@
     <section>
       <h2>Turbulent flow over NACA 4412 wing</h2>
       <figure>
+
+        <figure>
+          <video autoplay muted loop>
+            <source src="assets/media/VideoS1.mp4" type="video/mp4">
+          </video>
+          <figcaption>Figure 3. Time history of an online sepration location control run at 𝛼 = 0◦ showing top to bottom the control signal, 
+            output (separation location) as fraction of wing chord (dashed line is the control target), 𝐿2 norms of the state-space model matrices, 
+            𝐿2 norms of the feedback and feedforward gains and flow at select times at the bottom.
+            Vertical dotted green line represents the start of control..</figcaption>
+        </figure>
+
+
         <video autoplay muted loop>
-          <source src="assets/media/NACA4412_control.mp4" type="video/mp4">
+          <source src="assets/media/VideoS2.mp4" type="video/mp4">
         </video>
-        <figcaption>Figure 1. Time history of an online output control run at 𝛼 = 10◦ showing top to bottom the control signal, 
+        <figcaption>Figure 2. Time history of an online sepration location control run at 𝛼 = 10◦ showing top to bottom the control signal, 
           output (separation location) as fraction of wing chord (dashed line is the control target), 𝐿2 norms of the state-space model matrices, 
           𝐿2 norms of the feedback and feedforward gains and flow at select times at the bottom.
           Vertical dotted green line represents the start of control.</figcaption>
@@ -68,10 +80,17 @@
       A lower value of the forgetting factor can result in faster adapting state-space model, however rapid variations may not be ideal from the controller design point of view.
       Hence for the purposes of this study we have kept forgetting factor close to 1. Similarly, smaller controller update interval can allow faster response and its effect will be considered in what follows.
 
-      <!-- <figure>
-        <img src="assets/media/image2.png" alt="Description of figure 2">
-        <figcaption>Figure 2. Another caption.</figcaption>
-      </figure> -->
+
+      <figure>
+        <video autoplay muted loop>
+          <source src="assets/media/VideoS3.mp4" type="video/mp4">
+        </video>
+        <figcaption>Figure 3. Time history of an online lift control run at 𝛼 = 10◦ showing top to bottom the control signal, 
+          output (CL/CD ratio) with the dashed line indicating the control target, 𝐿2 norms of the state-space model matrices, 
+          𝐿2 norms of the feedback and feedforward gains and flow at select times at the bottom.
+          Vertical dotted green line represents the start of control.</figcaption>
+      </figure>
+
     </section>
 
     <!-- <section>
