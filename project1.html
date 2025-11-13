@@ -64,7 +64,7 @@
           Vertical dotted green line represents the start of control.</figcaption>
       </figure>
 
-      A sample time history of an online adaptive control run is shown in Fig. 1.
+      A sample time history of an online adaptive control run is shown in Fig. 2.
       The control is kept off for one chord time unit and is enabled at t=1.
       The uncontrolled separation location oscillates around 65% chord. The 𝐿2 norm of the state matrix A is changing rapidly as the oDMDc is adjusting as new information becomes available, the norm of the input matrix B is almost constant as the actuator input is zero.
       The changes in the norm of C are simply due to it being computed from the output y, which is fluctuating.
@@ -78,7 +78,7 @@
       The strength of turbulent structures in the boundary layer downstream of the actuator is greatly reduced and strong turbulence vortices reappear only well downstream of separation location.
       The norms of the state-space model matrices take slightly longer to converge because the forgetting factor of the oDMDc was set close to 1, which preserves old snapshots.
       A lower value of the forgetting factor can result in faster adapting state-space model, however rapid variations may not be ideal from the controller design point of view.
-      Hence for the purposes of this study we have kept forgetting factor close to 1. Similarly, smaller controller update interval can allow faster response and its effect will be considered in what follows.
+      Hence for the purposes of this study we have kept forgetting factor close to 1. Similarly, smaller controller update interval can allow faster response.
 
 
       <figure>
